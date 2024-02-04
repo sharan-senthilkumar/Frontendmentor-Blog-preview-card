@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root{
+    --primaty-yellow: hsl(47, 88%, 63%);
+
+    --neutral-white: hsl(0, 0%, 100%);
+    --neutral-grey: hsl(0, 0%, 40%);
+    --neutral-black: hsl(0, 0%, 7%);
+
+    --font-family: "Figtree", sans-serif;
+
+    --font-weight-1:600;
+    --font-weight-2:800;
+
+    --font-size:16px;
+}
+
+
+*{
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-1);
+    font-size: var(--font-size);
+}
+
+body{
+    background:var(--primaty-yellow);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card{
+    width:275px;
+    height:fit-content;
+    margin:100px auto;
+    padding:5px;
+    background: var(--neutral-white);
+    font-weight: var(--font-weight-1);
+    text-align: justify;
+    text-justify: inter-word;
+    border : 1px solid var(--neutral-black);
+    border-radius: 10px;
+    box-shadow: 5px 5px var(--neutral-black);
+    cursor: pointer;
+    transform: scale(1.0);
+    transition-duration: .5s;
+
+}
+
+.header{
+    width: calc(90% + 7px);
+    height: 10%;
+    padding:10px;
+    border-radius:20px;
+}
+
+.highlight{
+    display:inline-block;
+    padding:5px 10px;
+    margin:10px;
+    font-weight: var(--font-weight-2);
+    background: var(--primaty-yellow);
+    font-size: calc(var(--font-size)/1.25);
+    border-radius: 10px;
+}
+
+.date{
+    display:block;
+    font-size: calc(var(--font-size)/1.25);
+    padding:5px 10px;
+}
+
+.title{
+    padding:10px;
+    display:inline-block;
+    font-weight: var(--font-weight-2);
+}
+
+.description{
+    display:inline-block;
+    padding:10px;
+    color:var(--neutral-grey);
+    font-size: calc(var(--font-size)/1.35);
+}
+
+.profile{
+    display: flex;
+    margin:10px;
+    justify-content: flex-start;
+}
+
+.profile img{
+
+    height: 30px;
+    position: relative;
+    top:12px;
+}
+
+.profile .name{
+    padding: 5px 10px;
+    font-size: calc(var(--font-size)/1.1);
+    font-weight: var(--font-weight-2);
+}
+
+.card:hover {
+    transform: scale(1.1);
+    transition-duration: .5s;
+    box-shadow:10px 10px var(--neutral-black);
+}
+
+.card:hover .title {
+    color: var(--primaty-yellow);
+}
+
+
