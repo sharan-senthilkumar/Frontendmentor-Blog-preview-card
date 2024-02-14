@@ -1,115 +1,96 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 
 :root{
-    --primaty-yellow: hsl(47, 88%, 63%);
+    --Yellow: hsl(47, 88%, 63%);
+    --White: hsl(0, 0%, 100%);
+    --Grey: hsl(0, 0%, 50%);
+    --Black: hsl(0, 0%, 7%);
 
-    --neutral-white: hsl(0, 0%, 100%);
-    --neutral-grey: hsl(0, 0%, 40%);
-    --neutral-black: hsl(0, 0%, 7%);
+    --size:16px;
 
-    --font-family: "Figtree", sans-serif;
-
-    --font-weight-1:600;
-    --font-weight-2:800;
-
-    --font-size:16px;
+    --weight1:600;
+    --weight2:800;
 }
 
 
 *{
-    font-family: var(--font-family);
-    font-weight: var(--font-weight-1);
-    font-size: var(--font-size);
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Figtree", sans-serif;
+    /* font-size: var(--size); */
 }
 
 body{
-    background:var(--primaty-yellow);
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: var(--Yellow);
 }
 
 .card{
-    width:275px;
-    height:fit-content;
-    margin:100px auto;
-    padding:5px;
-    background: var(--neutral-white);
-    font-weight: var(--font-weight-1);
-    text-align: justify;
-    text-justify: inter-word;
-    border : 1px solid var(--neutral-black);
-    border-radius: 10px;
-    box-shadow: 5px 5px var(--neutral-black);
+    width:325px;
+    font-size: var(--size);
+    background: var(--White);
+    font-family: var(--weight1);
+    padding:20px;
+    box-shadow: 10px 10px 0 var(--Black);
+    border-radius: 1rem;
+    border:1px solid var(--Black);
     cursor: pointer;
-    transform: scale(1.0);
-    transition-duration: .5s;
-
 }
 
-.header{
-    width: calc(90% + 7px);
-    height: 10%;
+#article{
+    width:100%;
+    border-radius: 1rem;
+}
+
+#highlight{
+    display: inline-block;
+    background: var(--Yellow);
     padding:10px;
-    border-radius:20px;
+    margin:10px auto;
+    font-weight: var(--weight2);
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-radius: 1rem;
 }
 
-.highlight{
-    display:inline-block;
-    padding:5px 10px;
-    margin:10px;
-    font-weight: var(--font-weight-2);
-    background: var(--primaty-yellow);
-    font-size: calc(var(--font-size)/1.25);
-    border-radius: 10px;
+#time{
+    margin:10px auto;
+    font-size: 0.85rem;
 }
 
-.date{
-    display:block;
-    font-size: calc(var(--font-size)/1.25);
-    padding:5px 10px;
+h1{
+    margin: 10px auto;
+    font-size: 1.5rem;
 }
 
-.title{
-    padding:10px;
-    display:inline-block;
-    font-weight: var(--font-weight-2);
+.card:hover h1{
+    color: var(--Yellow);
 }
 
-.description{
-    display:inline-block;
-    padding:10px;
-    color:var(--neutral-grey);
-    font-size: calc(var(--font-size)/1.35);
+#description{
+    margin: 10px auto;
+    color:var(--Grey);
 }
 
 .profile{
-    display: flex;
-    margin:10px;
-    justify-content: flex-start;
+    margin:20px auto;
+    /* display: flex; */
 }
 
-.profile img{
-
-    height: 30px;
+#pic{
+    width:40px;
     position: relative;
-    top:12px;
+    top:10px;
 }
 
-.profile .name{
-    padding: 5px 10px;
-    font-size: calc(var(--font-size)/1.1);
-    font-weight: var(--font-weight-2);
+#name{
+    font-size: 1rem;
+    margin:0 10px;
+    font-weight: var(--weight2);
 }
-
-.card:hover {
-    transform: scale(1.1);
-    transition-duration: .5s;
-    box-shadow:10px 10px var(--neutral-black);
-}
-
-.card:hover .title {
-    color: var(--primaty-yellow);
-}
-
 
